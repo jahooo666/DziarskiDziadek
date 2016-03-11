@@ -1,0 +1,56 @@
+<div id="details-screen">
+    <a class="icon left-icon back-icon special" id="back-icon">
+        <img src="./img/icons/arrow_white.svg" alt="..." />
+    </a>
+
+    <div class="header" style="background-image: url('{{background}}');">
+        <a href="#"><h1>{{name}}</h1></a>
+    </div>
+
+    <div class="info">
+        <h3>{{description}}</h3>
+
+        <p class="link-to-website"><a href="{{website}}">{{website}}</a></p>
+
+        <hr>
+
+        <div class="gallery">
+            {{#each photos}}
+                <div class="gallery-image"><a href="{{this}}" class="swipebox"><img src="{{this}}" alt=""></a></div>
+            {{/each}}
+        </div>
+
+        <div id="bottom-menu">
+            <div class="hours">
+                <img src="img/icons/clock2.svg" /><br />
+                {{hours}}
+            </div>
+
+            <div class="vertical-line"></div>
+
+            <div class="price">
+                <img src="img/icons/coins.svg" /><br />
+                {{price}}
+            </div>
+
+            <div class="adres">
+                <img src="img/icons/location.svg" /><br />
+                {{adres}}
+                {{lat}}
+                {{long}}
+            </div>
+
+
+
+            <div class="vertical-line"></div>
+
+            <div class="jakdojade">
+                <a href="http://warszawa.jakdojade.pl/?td=Punkt%20docelowy&tc=50.05434:19.93931&tn=Cud%20nad%20Wisla">
+                <!--<a href="http://warszawa.jakdojade.pl/?td=Cel&tc=${long}:${lat}">-->
+                    <img src="img/icons/transport.svg" /><br />
+                    Dojazd
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

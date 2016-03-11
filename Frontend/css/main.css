@@ -1,0 +1,270 @@
+@font-face {
+    font-family: NexaLight;
+    src: url('../fonts/NexaLight.ttf');
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    margin: 10px auto;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.mapContainer {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 60px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #ffffff;
+    z-index: 1000;
+    float: left;
+}
+
+#details-screen .icon img {
+    height: 27px;
+    margin: 10px;
+}
+
+.icon img {
+    height: 40px;
+    margin: 10px;
+}
+
+.icon {
+    width: 60px;
+    display: inline-block;
+}
+
+.left-icon {
+    text-align: left;
+}
+
+.right-icon {
+    float: right;
+}
+
+.info {
+    padding: 10px 10px;
+}
+
+.back-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header {
+    height: 200px;
+    background-position: bottom center;
+    background-size: 100%;
+    padding-top: 164px;
+}
+
+.header h1 {
+    font-size: 18pt;
+    text-align: center;
+    margin-top: 0;
+    color: white;
+}
+
+.info h3 {
+    margin: 10px auto !important;
+    font-size: 12pt;
+    text-align: center;
+}
+
+#details-screen {
+    width: 100%;
+    height: 100%;
+}
+#container {
+}
+
+
+table {
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 220px;
+}
+
+td {
+    width: 50%;
+    height: 120px;
+}
+
+.activity {
+    width: 49%;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    background-color: yellow;
+    display: inline-block;
+}
+
+#menu-header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 120px;
+    text-align: center;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+#main-menu-table tr td p {
+    text-align: center;
+}
+
+#main-menu-table {
+    background-color: #f3faff;
+}
+
+#bottom-menu {
+    width: 100%;
+    margin-top: 20px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+#bottom-menu div {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    padding: 5px 3px;
+}
+
+.gallery .gallery-image {
+    display: inline-block;
+    width: 32%;
+}
+
+.gallery div img {
+    width: 100%;
+}
+
+#bottom-menu div img, #bottom-menu div a img {
+    width: 40px;
+
+}
+
+.info .link-to-website {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.info p img {
+    margin-bottom: 8px;
+}
+
+.info p {
+    font-size: 13pt;
+}
+
+#details-screen .info p a {
+    font-size: 11pt;
+}
+
+.jakdojade a {
+    color: black;
+}
+
+#bottom-menu div.vertical-line {
+    border-left: 1px solid black;
+    width: 5px;
+    height: 50px;
+    padding: 0;
+}
+
+#main-screen {
+    width: 100%;
+    height: 100%;
+}
+
+#menu-screen #menu-header {
+    width: 100%;
+}
+
+#menu-screen {
+    width: 100%;
+    height: 100%;
+    background-color: #f3faff;
+}
+
+#logo {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    max-width: 400px;
+}
+
+#back-arrow {
+    width: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+a#back-link {
+    display: block;
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+}
+
+.thumb {
+    width: 100px;
+    height: auto;
+    float: left;
+}
+
+.txt {
+    float: right;
+}
+
+#quick-guide-container {
+    margin-top: 200px;
+    padding: 10px;
+    font-size: 14pt;
+}
+
+#quick-guide-screen {
+    background-color: #f3faff;
+}
+
+#quick-guide-container img {
+    width: 100%
+}
+
+#quick-guide-container li {
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+.hours img, .price img, .jakdojade img {
+    margin-bottom: 7px;
+}
