@@ -330,12 +330,12 @@ ul li {
     margin: 0;
     padding: 3px 10px 5px 20px;
     border-bottom: 1px solid #ccc;
-    color: #666;
+
 }
 
 ul li:hover {
-    color: #000;
-    background-color: #0ca7d3;
+    background-color: #B81244;
+    color: #ffffff;
 }
 
 li:nth-child(odd) {
@@ -344,6 +344,20 @@ li:nth-child(odd) {
 
 li:nth-child(even) {
     color: #0084ab;
+}
+
+li:nth-child(odd) .eventTime {
+    color: #eeeeee;
+}
+
+.eventName {
+    font-size: 30px;
+}
+
+.eventTime {
+    color: #777777;
+    font-size: 20px;
+    text-align: right;
 }
 
 /*jasny - 0ca7d3 */

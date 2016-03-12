@@ -150,5 +150,5 @@ var switchView = function(from, to) {
     }
 };
 
-switchView('','main');
+switchView('', 'list');
 mainBinder();
