@@ -211,10 +211,13 @@ td {
 }
 
 #menu-screen {
-    width: 100%;
-    height: 100%;
     background-color: #f3faff;
+    max-width: 600px;
+    margin-left:auto;
+    margin-right: auto;
 }
+
+
 
 #logo {
     width: 100%;
