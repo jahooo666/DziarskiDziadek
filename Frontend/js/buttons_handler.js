@@ -81,6 +81,14 @@ Handlebars.registerHelper('ifCond', function(v1, v2, options) {
     return options.inverse(this);
 });
 
+Handlebars.registerHelper('list', function (items, options) {
+    var out = '<ul id="listaEventow/">';
+    for (var i = 0, l = items.length; i < l; i++) {
+        out = out + "<li>" + items[i] + "</li>";
+    }
+    return out + "</ul>";
+});
+
 
 var togetherBinder = function () {
     $("#together-screen #back-link").bind('click', function () {
