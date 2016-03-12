@@ -30,7 +30,7 @@ var data_for_together_view = {
     six: 'brak'
 };
 var data_for_main_view = {
-    title: 'Dziarski Dziadek',
+    title: 'Hoży Seniorzy',
     background: 'logo',
     one: 'Samemu',
     two: 'W grupie',
@@ -41,7 +41,7 @@ var data_for_main_view = {
 };
 
 var data_for_list_view = {
-    title: 'Dziarski Dziadek',
+    title: 'Hoży Seniorzy',
     background: 'logo',
     one: 'Samemu',
     two: 'W grupie',
@@ -150,5 +150,5 @@ var switchView = function(from, to) {
     }
 };
 
-switchView('', 'list');
+switchView('', 'main');
 mainBinder();
