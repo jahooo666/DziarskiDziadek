@@ -19,6 +19,7 @@
                                                                  src="./img/icons/{{one}}.svg"
                                                                  style="fill: '#5ecbea'"/>
             </p>
+
             </td>
             <td class="info"><p id="music-link">{{two}}<img class="center-block img-responsive"
                                                             src="./img/icons/{{two}}.svg">
@@ -27,14 +28,23 @@
 
         </tr>
         <tr>
+    {{#ifCond three "brak"}}
+
+    {{else}}
             <td class="info"><p id="sport-link">{{three}}<img class="center-block img-responsive"
                                                               src="./img/icons/{{three}}.svg">
             </p>
             </td>
+    {{/ifCond}}
+
+    {{#ifCond four "brak"}}
+
+    {{else}}
             <td class="info"><p id="nature-link">{{four}}<img class="center-block img-responsive"
                                                               src="./img/icons/{{four}}.svg">
             </p>
             </td>
+    {{/ifCond}}
         </tr>
         <tr>
             {{#ifCond five "brak"}}

@@ -277,7 +277,7 @@ a#back-link {
 }
 
 #menu-screen p{
-    font-size:25px;
+    font-size:50px !important;
 }
 
 
@@ -306,9 +306,10 @@ a#back-link {
 #menu-header h1{
     display: block;
     float: left;
-    margin-top: 15%;
+    margin-top: 10%;
+    margin-right: 12%;
     max-width: 40%;
-    font-size: 32px;
+    font-size: 55px;
 }
 
 .img-responsive{

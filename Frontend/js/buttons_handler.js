@@ -1,15 +1,6 @@
-var data_for_details_view = {
-    name: '',
-    description: '',
-    website: '',
-    hours: '',
-    price: '',
-    photos: ["img/photos/HckKlck/0.jpg","img/photos/HckKlck/1.jpg","img/photos/HckKlck/2.jpg"]
-};
-
 var data_for_menu_view = {
     title: 'Aktywności grupowe',
-    background: 'grupa3',
+    background: 'W grupie',
     one: 'Turystyka',
     two: 'Kultura',
     three: 'Aktywny wypoczynek',
@@ -19,7 +10,7 @@ var data_for_menu_view = {
 };
 var data_for_sam_view = {
     title: 'Aktywności indywidualne',
-    background: 'samemu',
+    background: 'Samemu',
     one: 'Gry',
     two: 'Zakupy',
     three: 'Edukacja',
@@ -30,14 +21,24 @@ var data_for_sam_view = {
 
 var data_for_together_view = {
     title: 'Aktywności grupowe',
+    background: 'W grupie',
     one: 'Turystyka',
     two: 'Kultura',
-    three: 'Aktywny wypoczynek',
+    three: 'Edukacja',
     four: 'Warsztaty',
-    five: 'Edukacja',
+    five: 'Aktywny wypoczynek',
     six: 'brak'
 };
-
+var data_for_main_view = {
+    title: 'Dziarski Dziadek',
+    background: 'logo',
+    one: 'Samemu',
+    two: 'W grupie',
+    three: 'brak',
+    four: 'brak',
+    five: 'brak',
+    six: 'brak'
+};
 
 
 
@@ -50,6 +51,8 @@ var getData = function (view) {
         return data_for_together_view;
     else if (view == 'sam')
         return data_for_sam_view;
+    else if (view == 'main')
+        return data_for_main_view;
     else
         return null;
 };
@@ -65,6 +68,7 @@ Handlebars.registerHelper('ifCond', function(v1, v2, options) {
 
 var switchView = function(from, to) {
 
+   // if (to=='together','sam','')
     var tmpl = Handlebars.getTemplate('menu-screen');
     var rendered = tmpl(getData(to));
 
@@ -116,7 +120,8 @@ var switchView = function(from, to) {
     }
 };
 
-switchView('','sam');
+switchView('','main');
+
 $("#main-screen #header a").bind('click', function () {
     switchView('main', 'menu');
 });
