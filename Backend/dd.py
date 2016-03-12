@@ -23,9 +23,9 @@ def return_events(category):
             events_in_category.append(event)
     return json.dumps(events_in_category)
 
-@app.route('/events/<event_id>')
+@app.route('/event/<event_id>')
 def return_event(event_id):
-    return 'event' + str(event_id)
+    return json.dumps(events[int(event_id)])
 
 @app.route('/categories/group')
 def return_categories():
@@ -34,6 +34,7 @@ def return_categories():
 def add_events_to_categories():
     i = 0
     for event in events:
+        event['id'] = i
         for category in event['category']:
             events_lists[category].append(i)
         i = i + 1

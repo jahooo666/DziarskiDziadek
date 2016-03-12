@@ -1,9 +1,42 @@
-.tab { border: solid 1px; }
+.jumbotron{
+    background-color: #1d388f;
+    color: white;
+}
 
-.td1 { font-family: Helvetica, sans-serif, Verdana, Arial; font-size: 13; font-weight: bold; background-color: #FF9900; color: #FFFFFF; border: 0; }
+.container{
+}
 
-.txt1 { font-family: Helvetica, sans-serif, Verdana, Arial; font-size: 13; font-weight: bold; background-color: #FF9900; color: #FFFFFF; border: 0; }
+.navbar{
+    background-color:#0f0f0f;
+    color: #3e8f3e;
+}
 
-.txt2 { font-family: Helvetica, sans-serif, Verdana, Arial; font-size: 12; font-weight: normal; border: thin groove ; border: solid; }
+.navbar-brand{
+    color: white;
+}
 
-.btn { font-family: Helvetica, sans-serif, Verdana, Arial; font-size: 12; background-color: #0099FF; color: #FFFFFF; border: solid; cursor: hand; }
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+form{
+  display: table;
+  text-align: center;
+  margin: auto;
+}
+
+.form-control{
+  margin-top: 20px;
+    text-align: center;
+}
+
+.btn-primary{
+  margin-top: 30px;
+    margin-right: 5px;
+}
+
+.btn-info{
+  margin-top: 30px;
+    margin-left: 5px;
+}

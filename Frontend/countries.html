@@ -3,32 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Odgadnij nazwę kraju!</title>
+    <script src="js/countries.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
+          integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/countries.css">
 </head>
-<BODY onLoad=stat() onKeyPress=catchKeyCode()>
-<FORM NAME=form1>
-<TABLE CLASS=tab BORDER=0 BGCOLOR=#FF9900 CELLPADDING=4 CELLSPACING=0>
-<TR>
-<TD CLASS=td1>
-<INPUT TYPE=text SIZE=46 NAME=hint VALUE="Wpisz nazwę kraju:" READONLY CLASS=txt1>
-</TD>
-</TR>
-<TR>
-<TD CLASS=td1>
-<INPUT TYPE=text NAME=guess1 SIZE=50 CLASS=txt2 TITLE="nazwa kraju">
-</TD>
-</TR>
-<TR>
-<TD CALSS=td1 ALIGN=right>
 
-<INPUT TYPE=button VALUE=Guess! onClick=guessit() CLASS=btn TITLE="Podpowiedź">
+<BODY onKeyPress=catchKeyCode()>
 
-<INPUT TYPE=button VALUE=Clear onClick=clearBox() CLASS=btn TITLE="Wyszyść">
+<div class="jumbotron">
+    <div class="container">
+        <h1>Zgadnij, co to za państwo!</h1>
+    </div>
+</div>
 
-<INPUT TYPE=button VALUE=New onClick=newGame() CLASS=btn TITLE="Nowa zagadka">
-
-</TD>
-</TR>
-</TABLE>
-</FORM>
+<div id="form" name="form1" onsubmit="guessit()">
+    <form action="" method="POST">
+        <div class="container">
+            <label for="city"><h2>Wpisz nazwę państwa:</h2></label></button>
+            <input type="text" class="form-control" name="guess1" id="guess1" placeholder="">
+            <input type="button" class="btn btn-lg btn-primary" value="ZGADUJ!" onClick=guessit()>
+            <input type="button" class="btn btn-lg btn-info" value="Nowa gra" onClick=newGame()>
+            <p id ="hint" name="hint"></p>
+        </div>
+    </form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </BODY>
+
+
 </html>
