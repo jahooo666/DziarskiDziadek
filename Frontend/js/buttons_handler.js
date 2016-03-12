@@ -40,7 +40,16 @@ var data_for_main_view = {
     six: 'brak'
 };
 
-
+var data_for_list_view = {
+    title: 'Dziarski Dziadek',
+    background: 'logo',
+    one: 'Samemu',
+    two: 'W grupie',
+    three: 'brak',
+    four: 'brak',
+    five: 'brak',
+    six: 'brak'
+};
 
 var getData = function (view) {
     if (view == 'details')
@@ -53,6 +62,8 @@ var getData = function (view) {
         return data_for_sam_view;
     else if (view == 'main')
         return data_for_main_view;
+    else if (view == 'list')
+        return data_for_list_view;
     else
         return null;
 };
@@ -64,6 +75,39 @@ Handlebars.registerHelper('ifCond', function(v1, v2, options) {
     }
     return options.inverse(this);
 });
+
+
+var togetherBinder = function () {
+    $("#together-screen #back-link").bind('click', function () {
+        switchView('together', 'main');
+    });
+    $("#together-screen #one").bind('click', function () {
+        switchView('together', 'list');
+    });
+};
+
+var samBinder = function () {
+    $("#sam-screen #back-link").bind('click', function () {
+        switchView('sam', 'main');
+    });
+};
+
+
+var mainBinder = function () {
+    $("#main-screen #one").bind('click', function () {
+        switchView('main', 'sam');
+    });
+    $("#main-screen #two").bind('click', function () {
+        switchView('main', 'together');
+    });
+};
+
+
+var listBinder = function () {
+    $("#list-screen #back-link").bind('click', function () {
+        switchView('list', 'together');
+    });
+};
 
 
 var switchView = function(from, to) {
@@ -80,67 +124,31 @@ var switchView = function(from, to) {
     // Possible scenarios
     if (from == 'main' && to == 'together') {
         $("#main-screen").remove();
-        $("#together-screen #back-link").bind('click', function () {
-            switchView('together', 'main');
-        });
-
+        togetherBinder();
 
     } else if (from == 'main' && to == 'sam') {
         $("#main-screen").remove();
-        $("#sam-screen #back-link").bind('click', function () {
-            switchView('sam', 'main');
-        });
-
+        samBinder();
 
     }
     else if (from == 'sam' && to == 'main') {
         $("#sam-screen").remove();
-        $("#main-screen #one").bind('click', function () {
-            switchView('main', 'sam');
-        });
-        $("#main-screen #two").bind('click', function () {
-            switchView('main', 'together');
-        });
+        mainBinder();
+
     }
     else if (from == 'together' && to == 'main') {
         $("#together-screen").remove();
-        $("#main-screen #one").bind('click', function () {
-            switchView('main', 'sam');
-        });
-        $("#main-screen #two").bind('click', function () {
-            switchView('main', 'together');
-        });
-    } else if (from == 'main' && to == 'details') {
-        $("#main-screen").remove();
-        $("#details-screen #back-icon").bind('click', function () {
-            switchView('details', 'main');
-        });
-    } else if (from == 'details' && to == 'main') {
-        $("#details-screen").remove();
-        $("#main-screen #header a").bind('click', function () {
-            switchView('main', 'menu');
-        });
-        initMap();
-    } else if (from == 'menu' && to == 'quick-guide') {
-        $("#menu-screen").remove();
-        $("#quick-guide-screen #back-link").bind('click', function () {
-            switchView('quick-guide', 'menu');
-        });
-    } else if (from == 'quick-guide' && to == 'menu') {
-        $("#quick-guide-screen").remove();
-        $("#menu-screen #back-link").bind('click', function () {
-            switchView('menu', 'main');
-        });
-        $("#practical-info-link").bind('click',function() {
-            switchView('menu','quick-guide');
-        })
+        mainBinder();
+    }
+    else if (from == 'together' && to == 'list') {
+        $("#together-screen").remove();
+        listBinder();
+    }
+    else if (from == 'list' && to == 'together') {
+        $("#list-screen").remove();
+        togetherBinder();
     }
 };
 
 switchView('','main');
-$("#main-screen #one").bind('click', function () {
-    switchView('main', 'sam');
-});
-$("#main-screen #two").bind('click', function () {
-    switchView('main', 'together');
-});
+mainBinder();
