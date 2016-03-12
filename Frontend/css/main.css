@@ -280,10 +280,6 @@ a#back-link {
     font-size:25px;
 }
 
-#menu-screen {
-
-
-}
 
 #menu-header{
     display: block;
@@ -291,7 +287,8 @@ a#back-link {
     overflow: hidden;
     padding: 15px;
     border-radius: 20px;
-    background-color: #044c62;
+    /*background-color: #044c62;*/
+    background-color: #B81244;
     border: 8px white solid;
     border-bottom: 2px;
 }
@@ -314,7 +311,18 @@ a#back-link {
     font-size: 32px;
 }
 
+.img-responsive{
+ width: 85% !important;
+ margin-top: 10px;
+}
 
+.info > p {
+    font-size: 30px !important;
+    margin-top: 15px !important;
+}
+body{
+    background-color: #FFFFFF !important;
+}
 /*jasny - 0ca7d3 */
 /*srednio jasny - 0a99c3 */
 /*ciemniejszy - 0084ab */

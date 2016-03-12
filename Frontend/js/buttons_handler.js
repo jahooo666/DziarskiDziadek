@@ -14,19 +14,29 @@ var data_for_menu_view = {
     two: 'Kultura',
     three: 'Aktywny wypoczynek',
     four: 'Warsztaty',
-    five: 'Edukacja'
-    //,six: 'szesc'
+    five: 'Edukacja',
+    six: 'brak'
+};
+var data_for_sam_view = {
+    title: 'Aktywności indywidualne',
+    background: 'samemu',
+    one: 'Gry',
+    two: 'Zakupy',
+    three: 'Edukacja',
+    four: 'Sport',
+    five: 'brak',
+    six: 'brak'
 };
 
-//var data_for_together_view = {
-//    title: 'Aktywności grupowe',
-//    one: 'Turystyka',
-//    two: 'Kultura',
-//    three: 'Aktywny wypoczynek',
-//    four: 'Warsztaty',
-//    five: 'Edukacja'
-//    //,six: 'szesc'
-//};
+var data_for_together_view = {
+    title: 'Aktywności grupowe',
+    one: 'Turystyka',
+    two: 'Kultura',
+    three: 'Aktywny wypoczynek',
+    four: 'Warsztaty',
+    five: 'Edukacja',
+    six: 'brak'
+};
 
 
 
@@ -38,14 +48,24 @@ var getData = function (view) {
         return data_for_menu_view;
     else if (view == 'together')
         return data_for_together_view;
+    else if (view == 'sam')
+        return data_for_sam_view;
     else
         return null;
 };
 
 
+Handlebars.registerHelper('ifCond', function(v1, v2, options) {
+    if(v1 === v2) {
+        return options.fn(this);
+    }
+    return options.inverse(this);
+});
+
+
 var switchView = function(from, to) {
 
-    var tmpl = Handlebars.getTemplate(to+'-screen');
+    var tmpl = Handlebars.getTemplate('menu-screen');
     var rendered = tmpl(getData(to));
 
     $("body").append(rendered);
@@ -96,7 +116,7 @@ var switchView = function(from, to) {
     }
 };
 
-switchView('','menu');
+switchView('','sam');
 $("#main-screen #header a").bind('click', function () {
     switchView('main', 'menu');
 });

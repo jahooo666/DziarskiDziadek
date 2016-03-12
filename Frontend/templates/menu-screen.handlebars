@@ -4,12 +4,18 @@
         <div id="back-arrow-link">
             <a href="#" id="back-link"><img src="img/icons/back.svg" id="back-arrow"/></a>
         </div>
+
+
+
         <h1>{{title}}</h1>
         <img src="./img/icons/{{background}}.svg" >
     </div>
     <table id="main-menu-table" class="table-hover">
         <tr>
-            <td class="info"><p id="gastronomy-link">{{one}}<img class="center-block img-responsive"
+            <td class="info">
+                <p id="gastronomy-link">
+                    {{one}}
+                    <img class="center-block img-responsive"
                                                                  src="./img/icons/{{one}}.svg"
                                                                  style="fill: '#5ecbea'"/>
             </p>
@@ -31,14 +37,23 @@
             </td>
         </tr>
         <tr>
-            <td class="info"><p id="other-info-link">{{five}}<img class="center-block img-responsive"
-                                                                  src="./img/icons/{{five}}.svg">
-            </p>
-            </td>
-          <!--  <td class="info"><p id="practical-info-link">{{six}}<img class="center-block img-responsive"
-                                                                     src="./img/icons/{{six}}.svg"
-                                                                     style="width:80%; margin-top:10px"/></p>
-            </td>-->
+            {{#ifCond five "brak"}}
+
+            {{else}}
+                <td class="info"><p id="other-info-link">{{five}}<img class="center-block img-responsive"
+                                                                      src="./img/icons/{{five}}.svg">
+                </p>
+                </td>
+            {{/ifCond}}
+
+            {{#ifCond six "brak"}}
+
+            {{else}}
+                <td class="info"><p id="other-info-link">{{six}}<img class="center-block img-responsive"
+                                                                      src="./img/icons/{{six}}.svg">
+                </p>
+                </td>
+            {{/ifCond}}
         </tr>
     </table>
 </div>
