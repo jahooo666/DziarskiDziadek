@@ -9,6 +9,7 @@ var data_for_details_view = {
 
 var data_for_menu_view = {
     title: 'Aktywności grupowe',
+    background: 'grupa3',
     one: 'Turystyka',
     two: 'Kultura',
     three: 'Aktywny wypoczynek',
@@ -95,7 +96,7 @@ var switchView = function(from, to) {
     }
 };
 
-switchView('','main');
+switchView('','menu');
 $("#main-screen #header a").bind('click', function () {
     switchView('main', 'menu');
 });

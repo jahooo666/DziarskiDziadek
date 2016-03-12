@@ -69,6 +69,12 @@ hr {
 
 .info {
     padding: 10px 10px;
+    border: 6px white solid;
+    border-radius: 20px;
+    background-color: #0084ab !important;
+}
+.info:hover {
+    background-color: #0a99c3 !important;
 }
 
 .back-icon {
@@ -109,7 +115,6 @@ table {
     border: none;
     border-collapse: collapse;
     width: 100%;
-    margin-top: 220px;
 }
 
 td {
@@ -127,13 +132,12 @@ td {
 }
 
 #menu-header {
-    width: 100%;
-    position: absolute;
+    /*width: 100%;*/
+    /*position: absolute;
     top: 0;
-    left: 0;
+    left: 0;*/
     height: 120px;
     text-align: center;
-    margin-top: 20px;
     z-index: 1;
 }
 
@@ -206,9 +210,6 @@ td {
     height: 100%;
 }
 
-#menu-screen #menu-header {
-    width: 100%;
-}
 
 #menu-screen {
     background-color: #f3faff;
@@ -228,8 +229,7 @@ td {
 
 #back-arrow {
     width: 40px;
-    margin-top: 10px;
-    margin-left: 10px;
+
 }
 
 a#back-link {
@@ -271,3 +271,51 @@ a#back-link {
 .hours img, .price img, .jakdojade img {
     margin-bottom: 7px;
 }
+
+#menu-screen p, h1, h2{
+    color: white;
+}
+
+#menu-screen p{
+    font-size:25px;
+}
+
+#menu-screen {
+
+
+}
+
+#menu-header{
+    display: block;
+    height: 250px;
+    overflow: hidden;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #044c62;
+    border: 8px white solid;
+    border-bottom: 2px;
+}
+
+#back-arrow-link{
+    display: inline-block;
+    z-index: 10;
+    float: left;
+
+}
+#menu-header img{
+    height:100%;
+
+}
+#menu-header h1{
+    display: block;
+    float: left;
+    margin-top: 15%;
+    max-width: 40%;
+    font-size: 32px;
+}
+
+
+/*jasny - 0ca7d3 */
+/*srednio jasny - 0a99c3 */
+/*ciemniejszy - 0084ab */
+/*najciemniejszy - 044c62 */
