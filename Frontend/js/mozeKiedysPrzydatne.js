@@ -323,5 +323,48 @@ var data_for_menu_view = {
 };
 
 
+// Possible scenarios
+if (from == 'main' && to == 'menu') {
+    $("#main-screen").remove();
+    $("#menu-screen #back-link").bind('click', function () {
+        switchView('menu', 'main');
+    });
+    $("#practical-info-link").bind('click', function () {
+        switchView('menu', 'quick-guide');
+    })
+} else if (from == 'menu' && to == 'main') {
+    $("#menu-screen").remove();
+    $("#main-screen #header a").bind('click', function () {
+        switchView('main', 'menu');
+    });
+    initMap();
+} else if (from == 'main' && to == 'details') {
+    $("#main-screen").remove();
+    $("#details-screen #back-icon").bind('click', function () {
+        switchView('details', 'main');
+    });
+} else if (from == 'details' && to == 'main') {
+    $("#details-screen").remove();
+    $("#main-screen #header a").bind('click', function () {
+        switchView('main', 'menu');
+    });
+    initMap();
+} else if (from == 'menu' && to == 'quick-guide') {
+    $("#menu-screen").remove();
+    $("#quick-guide-screen #back-link").bind('click', function () {
+        switchView('quick-guide', 'menu');
+    });
+} else if (from == 'quick-guide' && to == 'menu') {
+    $("#quick-guide-screen").remove();
+    $("#menu-screen #back-link").bind('click', function () {
+        switchView('menu', 'main');
+    });
+    $("#practical-info-link").bind('click', function () {
+        switchView('menu', 'quick-guide');
+    })
+}
+}
+;
+
 
 //<img src="img/logo/HastaLaWislaNiskie.png" onclick="if(this.src === 'http://edi.iem.pw.edu.pl/~matlaczm/wawcode/Frontend/img/logo/HastaLaWislaNiskie.png') { this.src='img/logo/HastaLaWislaLunetaNiski.png'} else { this.src='img/logo/HastaLaWislaNiskie.png' }"alt="Hasta la Wisła" id="logo"/>

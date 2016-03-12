@@ -68,8 +68,7 @@ Handlebars.registerHelper('ifCond', function(v1, v2, options) {
 
 var switchView = function(from, to) {
 
-   // if (to=='together','sam','')
-    var tmpl = Handlebars.getTemplate('menu-screen');
+    var tmpl = Handlebars.getTemplate(to + '-screen');
     var rendered = tmpl(getData(to));
 
     $("body").append(rendered);
@@ -79,20 +78,38 @@ var switchView = function(from, to) {
 
 
     // Possible scenarios
-    if (from == 'main' && to == 'menu') {
+    if (from == 'main' && to == 'together') {
         $("#main-screen").remove();
-        $("#menu-screen #back-link").bind('click', function () {
-            switchView('menu', 'main');
+        $("#together-screen #back-link").bind('click', function () {
+            switchView('together', 'main');
         });
-        $("#practical-info-link").bind('click',function() {
-            switchView('menu','quick-guide');
-        })
-    } else if (from == 'menu' && to == 'main') {
-        $("#menu-screen").remove();
-        $("#main-screen #header a").bind('click', function () {
-            switchView('main', 'menu');
+
+
+    } else if (from == 'main' && to == 'sam') {
+        $("#main-screen").remove();
+        $("#sam-screen #back-link").bind('click', function () {
+            switchView('sam', 'main');
         });
-        initMap();
+
+
+    }
+    else if (from == 'sam' && to == 'main') {
+        $("#sam-screen").remove();
+        $("#main-screen #one").bind('click', function () {
+            switchView('main', 'sam');
+        });
+        $("#main-screen #two").bind('click', function () {
+            switchView('main', 'together');
+        });
+    }
+    else if (from == 'together' && to == 'main') {
+        $("#together-screen").remove();
+        $("#main-screen #one").bind('click', function () {
+            switchView('main', 'sam');
+        });
+        $("#main-screen #two").bind('click', function () {
+            switchView('main', 'together');
+        });
     } else if (from == 'main' && to == 'details') {
         $("#main-screen").remove();
         $("#details-screen #back-icon").bind('click', function () {
@@ -121,8 +138,9 @@ var switchView = function(from, to) {
 };
 
 switchView('','main');
-
-$("#main-screen #header a").bind('click', function () {
-    switchView('main', 'menu');
+$("#main-screen #one").bind('click', function () {
+    switchView('main', 'sam');
 });
-
+$("#main-screen #two").bind('click', function () {
+    switchView('main', 'together');
+});
