@@ -8,14 +8,26 @@ var data_for_details_view = {
 };
 
 var data_for_menu_view = {
-    title: 'Dziarski dziadek',
-    one: 'jeden',
-    two: 'dwa',
-    three: 'trzy',
-    four: 'cztery',
-    five: 'piec',
-    six: 'szesc'
+    title: 'Aktywności grupowe',
+    one: 'Turystyka',
+    two: 'Kultura',
+    three: 'Aktywny wypoczynek',
+    four: 'Warsztaty',
+    five: 'Edukacja'
+    //,six: 'szesc'
 };
+
+//var data_for_together_view = {
+//    title: 'Aktywności grupowe',
+//    one: 'Turystyka',
+//    two: 'Kultura',
+//    three: 'Aktywny wypoczynek',
+//    four: 'Warsztaty',
+//    five: 'Edukacja'
+//    //,six: 'szesc'
+//};
+
+
 
 
 var getData = function (view) {
@@ -23,6 +35,8 @@ var getData = function (view) {
         return data_for_details_view;
     else if (view == 'menu')
         return data_for_menu_view;
+    else if (view == 'together')
+        return data_for_together_view;
     else
         return null;
 };
