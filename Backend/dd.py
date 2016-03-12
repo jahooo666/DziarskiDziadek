@@ -17,11 +17,11 @@ def sort_events_by_date(events):
 def hello_world():
     return render_template('./../index1.html')
 
-@app.route('/events/<category>', )
-def return_events(category):
+@app.route('/events/<type>/<category>', )
+def return_events(type, category):
     events_in_category = []
     for event in events:
-        if event['category'].__contains__(category):
+        if event['category'].__contains__(category) and  event['typ'] == type:
             events_in_category.append(event)
     return json.dumps(events_in_category)
 
@@ -41,10 +41,11 @@ def add_events_to_categories():
             events_lists[category].append(i)
         i = i + 1
 
+
 events = sort_events_by_date(events)
-# print events
-add_events_to_categories()
+# add_events_to_categories()
 # print events_lists
+
 
 if __name__ == '__main__':
     app.run()
