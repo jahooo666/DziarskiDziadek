@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 from flask import json
 
-categories_group = ["turystyka", "kultura", "aktywny wypoczynek", "warsztaty", "edukacja"]
-categories_indv = ["gry", "kultura", "edukacja","sport"]
+categories_group = ["Turystyka", "Kultura", "Aktywny wypoczynek", "Warsztaty", "Edukacja"]
+categories_indv = ["Gry", "Kultura", "Edukacja","Sport"]
 
-events_lists = {'turystyka': [], 'kultura': [], 'aktywny wypoczynek': [], 'warsztaty': [], 'edukacja': []}
+events_lists = {'Turystyka': [], 'Kultura': [], 'Aktywny wypoczynek': [], 'Warsztaty': [], 'Edukacja': []}
 
 
 events = [
-     {'category': ['kultura', 'aktywny_wypoczynek'], 'nazwa': "Migoświat", 'adres': u'Klub na Hożej', 'datetime': '05.03.2016', 'opis': ''},
-     {'category': ['turystyka', "kultura"], 'nazwa': "Spacer filmowy", 'adres': u'Waryńskiego 10', 'datetime': '1.10.2015 15:10'},
+     {'category': ['Kultura', 'aktywny_wypoczynek'], 'nazwa': "Migoświat", 'adres': u'Klub na Hożej', 'datetime': '05.03.2016', 'opis': ''},
+     {'category': ['Turystyka', "Kultura"], 'nazwa': "Spacer filmowy", 'adres': u'Waryńskiego 10', 'datetime': '1.10.2015 15:10'},
      {'category': ['aktywny_wypoczynek'], 'nazwa': u"Ćwiczenia filmowe", 'adres': u'Waryńskiego 10', 'datetime': '1.10.2015 15:10'},
-     {'category': ['edukacja'], 'nazwa': "Wykład filmowy", 'adres': u'Waryńskiego 10', 'datetime': '1.10.2015 15:10'}
+     {'category': ['Edukacja'], 'nazwa': "Wykład filmowy", 'adres': u'Waryńskiego 10', 'datetime': '1.10.2015 15:10'}
 ]
 
 events = [
@@ -24,7 +24,7 @@ events = [
     "url": "http://dks.art.pl/index.php?p=rep&s=1687val=&f=2016-03",
     "cena": 0,
     "category": [
-      "kultura"
+      "Kultura"
     ],
     "typ": "indw",
     "lat/long": "52.225658,21.0118732"
@@ -39,7 +39,7 @@ events = [
     "cena": 0,
     "typ": "grup",
     "category": [
-      "warsztaty"
+      "Warsztaty"
     ],
     "lat/long": "52.2489492,20.996592"
   },
@@ -50,11 +50,11 @@ events = [
     "zdjecie": 0,
     "datetime": "10.04.2016 11-16",
     "typ": "grup",
-    "url": "http://syntonia.jimdo.com/blisko-bliskich/warsztaty-tematyczne-dla-rodzinnych-opiekun%C3%B3w-os%C3%B3b-starszych/",
+    "url": "http://syntonia.jimdo.com/blisko-bliskich/Warsztaty-tematyczne-dla-rodzinnych-opiekun%C3%B3w-os%C3%B3b-starszych/",
     "cena": 0,
     "category": [
-      "warsztaty",
-      "edukacja"
+      "Warsztaty",
+      "Edukacja"
     ],
     "lat/long": "52.236309,21.0040083"
   },
@@ -68,8 +68,8 @@ events = [
     "typ": "grup",
     "cena": 0,
     "category": [
-      "edukacja",
-      "warsztaty"
+      "Edukacja",
+      "Warsztaty"
     ],
     "lat/long": 0
   },
@@ -83,7 +83,7 @@ events = [
     "typ": "grup",
     "cena": 10,
     "category": [
-      "edukacja"
+      "Edukacja"
     ],
     "lat/long": 0
   },
@@ -97,7 +97,7 @@ events = [
     "cena": 0,
     "typ": "indw",
     "category": [
-      "kultura"
+      "Kultura"
     ],
     "lat/long": 0
   },
@@ -111,7 +111,7 @@ events = [
     "cena": 0,
     "typ": "grup",
     "category": [
-      "turystyka"
+      "Turystyka"
     ],
     "lat/long": 0
   },
@@ -125,7 +125,7 @@ events = [
     "cena": 85,
     "typ": "grup",
     "category": [
-      "turystyka"
+      "Turystyka"
     ],
     "lat/long": 0
   },
@@ -139,7 +139,7 @@ events = [
     "cena": 0,
     "typ": "grup",
     "category": [
-      "kultura"
+      "Kultura"
     ],
     "lat/long": 0
   }

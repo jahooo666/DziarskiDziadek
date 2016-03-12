@@ -10,10 +10,14 @@
 
 
     <ul id="listaEventow">
-        <li><p class="eventName">Długi tekst ktor moze duuuzo zająć</p>
-            <p class="eventTime">03.12.2016 15:26</p></li>
-        <li><p class="eventName">Długi tekst ktor moze duuuzługi tekst ktor moze duuuzo zająć</p>
-            <p class="eventTime">03.12.2016 15:26</p></li>
+        <li><p id="eventName1" class="eventName">Długi tekst ktor moze duuuzo zająć</p>
+            <p id="eventVenue1" class="eventName"></p>
+            <p id="eventTime1" class="eventTime">03.12.2016 15:26</p>
+        </li>
+        <li><p id="eventName2" class="eventName">Długi tekst ktor moze duuuzługi tekst ktor moze duuuzo zająć</p>
+            <p id="eventVenue2" class="eventName"></p>
+            <p id="eventTime2" class="eventTime">03.12.2016 15:26</p>
+        </li>
 
     </ul>
 
@@ -21,8 +25,18 @@
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.onreadystatechange = function () {
             if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-                document.getElementById("listaEventow").innerHTML = xmlHttp.responseText;
-                console.log(xmlHttp.responseText)
+//                document.getElementById("listaEventow").innerHTML = xmlHttp.responseText;
+                console.log(xmlHttp.responseText);
+                var jsonObj = $.parseJSON(xmlHttp.responseText);
+                console.log(jsonObj[0]);
+                console.log(jsonObj[1]);
+                $('#eventName1').html(jsonObj[0].nazwa);
+                $('#eventVenue1').html("Start: " + jsonObj[0].adres);
+                $('#eventTime1').html(jsonObj[0].datetime);
+
+                $('#eventName2').html(jsonObj[1].nazwa);
+                $('#eventVenue2').html("Start: " + jsonObj[1].adres);
+                $('#eventTime2').html(jsonObj[1].datetime);
             }
         }
         xmlHttp.open("GET", "http://127.0.0.1:5000/events/grup/{{title}}", true); // true for asynchronous
