@@ -343,10 +343,10 @@ li:nth-child(odd) {
 }
 
 li:nth-child(even) {
-    color: #0084ab;
+    background-color: #0084ab;
 }
 
-li:nth-child(odd) .eventTime {
+li:nth-child(odd) .eventTime{
     color: #eeeeee;
 }
 
@@ -372,6 +372,3 @@ li:hover .eventTime {
 /*ciemniejszy - 0084ab */
 /*najciemniejszy - 044c62 */
 
-.eventName{
-    color: white;
-}
