@@ -372,3 +372,7 @@ li:hover .eventTime {
 /*srednio jasny - 0a99c3 */
 /*ciemniejszy - 0084ab */
 /*najciemniejszy - 044c62 */
+
+.eventName{
+    color: white;
+}

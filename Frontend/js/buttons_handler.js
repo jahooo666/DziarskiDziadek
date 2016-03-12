@@ -39,11 +39,21 @@ var data_for_main_view = {
     five: 'brak',
     six: 'brak'
 };
+
+
+
+
 var data_for_turystyka_list_view = {title: 'Turystyka'};
 var data_for_kultura_list_view = {title: 'Kultura'};
 var data_for_edukacja_list_view = {title: 'Edukacja'};
 var data_for_warsztaty_list_view = {title: 'Warsztaty'};
 var data_for_AktywnyWypoczynek_list_view = {title: 'Aktywny wypoczynek'};
+
+
+
+var data_for_gry_list_view = { title: 'Gry'};
+
+
 //var data_for_list_view = { title: 'turystyka'};
 
 var getData = function (view) {
@@ -69,6 +79,8 @@ var getData = function (view) {
         return data_for_warsztaty_list_view;
     else if (view == 'aktywny wypoczynek-list')
         return data_for_AktywnyWypoczynek_list_view;
+    else if (view == 'gry-list')
+        return data_for_gry_list_view;
     else
         return null;
 };
@@ -117,6 +129,10 @@ var samBinder = function () {
     $("#sam-screen #back-link").bind('click', function () {
         switchView('sam', 'main');
     });
+    $("#sam-screen #one").bind('click', function () {
+        switchView('sam', 'gry-list');
+    });
+
 };
 
 
@@ -133,6 +149,12 @@ var mainBinder = function () {
 var listBinder = function () {
     $("#list-screen #back-link").bind('click', function () {
         switchView('list', 'together');
+    });
+};
+
+var listBinderSam = function () {
+    $("#list-screen #back-link").bind('click', function () {
+        switchView('list', 'sam');
     });
 };
 
@@ -195,6 +217,15 @@ var switchView = function(from, to) {
         $("#together-screen").remove();
         listBinder();
     }
+    else if (from == 'sam' && to == 'gry-list') {
+        $("#sam-screen").remove();
+        listBinderSam();
+    }
+    else if (from == 'gry-list' && to == 'sam') {
+        $("#gry-list-screen").remove();
+        samBinder();
+    }
+
 };
 
 switchView('', 'main');
