@@ -1,0 +1,47 @@
+<div id="list-screen">
+    <div id="menu-header">
+        <div id="back-arrow-link">
+            <a href="#" id="back-link"><img src="img/icons/back.svg" id="back-arrow"/></a>
+        </div>
+
+        <h1>{{title}}</h1>
+        <img src="./img/icons/{{title}}.svg">
+    </div>
+
+
+    <ul id="listaEventow">
+        <li><p class="eventName">Długi tekst ktor moze duuuzo zająć</p>
+            <p class="eventTime">03.12.2016 15:26</p></li>
+        <li><p class="eventName">Długi tekst ktor moze duuuzługi tekst ktor moze duuuzo zająć</p>
+            <p class="eventTime">03.12.2016 15:26</p></li>
+        <li><p class="eventName">Długi tekst ktługi tekst ktor moze duuuzor moze duuuzo zająć</p>
+            <p class="eventTime">03.12.2016 15:26</p></li>
+        <li><p class="eventName">Długi tekst ktor moze duuuzo zająć</p>
+            <p class="eventTime">03.12.2016 15:26</p></li>
+        <li><p class="eventName">Długiługi tekst ktor moze duuuzługi tekst ktor moze duuuz tekst ktor moze duuuzo
+            zająć</p>
+            <p class="eventTime">03.12.2016 15:26</p></li>
+        <li><p class="eventName">Długi tekst ktługi tekst ktor moze duuuzor moze duuuzo zająćługi tekst ktor moze
+            duuuz</p>
+            <p class="eventTime">03.12.2016 15:26</p></li>
+        <li><p class="eventName">Długi ługi tekst ktor moze duuuztekst ktor moze duuuzo zająć</p>
+            <p class="eventTime">03.12.2016 15:26</p></li>
+        <li><p class="eventName">Długi tekst ktor mozługi tekst ktor moze duuuzługi tekst ktor moze duuuze duuuzo
+            zająć</p>
+            <p class="eventTime">03.12.2016 15:26</p></li>
+
+    </ul>
+
+    <script>
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function () {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                document.getElementById("listaEventow").innerHTML = xmlHttp.responseText;
+                console.log(xmlHttp.responseText)
+            }
+        }
+        xmlHttp.open("GET", "http://127.0.0.1:5000/events/{{title}}", true); // true for asynchronous
+        xmlHttp.send(null);
+
+    </script>
+</div>

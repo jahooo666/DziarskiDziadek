@@ -39,13 +39,12 @@ var data_for_main_view = {
     five: 'brak',
     six: 'brak'
 };
-
-var data_for_turystyka_list_view = {
-    title: 'turystyka'
-};
-var data_for_list_view = {
-    title: 'turystyka'
-};
+var data_for_turystyka_list_view = {title: 'Turystyka'};
+var data_for_kultura_list_view = {title: 'Kultura'};
+var data_for_edukacja_list_view = {title: 'Edukacja'};
+var data_for_warsztaty_list_view = {title: 'Warsztaty'};
+var data_for_AktywnyWypoczynek_list_view = {title: 'Aktywny wypoczynek'};
+//var data_for_list_view = { title: 'turystyka'};
 
 var getData = function (view) {
     if (view == 'details')
@@ -60,6 +59,16 @@ var getData = function (view) {
         return data_for_main_view;
     else if (view == 'list')
         return data_for_list_view;
+    else if (view == 'turystyka-list')
+        return data_for_turystyka_list_view;
+    else if (view == 'kultura-list')
+        return data_for_kultura_list_view;
+    else if (view == 'edukacja-list')
+        return data_for_edukacja_list_view;
+    else if (view == 'warsztaty-list')
+        return data_for_warsztaty_list_view;
+    else if (view == 'aktywny wypoczynek-list')
+        return data_for_AktywnyWypoczynek_list_view;
     else
         return null;
 };
@@ -78,9 +87,8 @@ var togetherBinder = function () {
         switchView('together', 'main');
     });
     $("#together-screen #one").bind('click', function () {
-        switchView('together', 'turystyka');
+        switchView('together', 'turystyka-list');
     });
-
     $("#together-screen #two").bind('click', function () {
         switchView('together', 'kultura-list');
     });
@@ -95,6 +103,7 @@ var togetherBinder = function () {
         switchView('together', 'aktywny wypoczynek-list');
     });
 };
+
 
 var samBinder = function () {
     $("#sam-screen #back-link").bind('click', function () {
@@ -159,6 +168,22 @@ var switchView = function(from, to) {
         togetherBinder();
     }
     else if (from == 'together' && to == 'turystyka-list') {
+        $("#together-screen").remove();
+        listBinder();
+    }
+    else if (from == 'together' && to == 'kultura-list') {
+        $("#together-screen").remove();
+        listBinder();
+    }
+    else if (from == 'together' && to == 'edukacja-list') {
+        $("#together-screen").remove();
+        listBinder();
+    }
+    else if (from == 'together' && to == 'warsztaty-list') {
+        $("#together-screen").remove();
+        listBinder();
+    }
+    else if (from == 'together' && to == 'aktywny wypoczynek-list') {
         $("#together-screen").remove();
         listBinder();
     }
