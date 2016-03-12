@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Odgadnij nazwę kraju!</title>
+</head>
+<BODY onLoad=stat() onKeyPress=catchKeyCode()>
+<FORM NAME=form1>
+<TABLE CLASS=tab BORDER=0 BGCOLOR=#FF9900 CELLPADDING=4 CELLSPACING=0>
+<TR>
+<TD CLASS=td1>
+<INPUT TYPE=text SIZE=46 NAME=hint VALUE="Wpisz nazwę kraju:" READONLY CLASS=txt1>
+</TD>
+</TR>
+<TR>
+<TD CLASS=td1>
+<INPUT TYPE=text NAME=guess1 SIZE=50 CLASS=txt2 TITLE="nazwa kraju">
+</TD>
+</TR>
+<TR>
+<TD CALSS=td1 ALIGN=right>
+
+<INPUT TYPE=button VALUE=Guess! onClick=guessit() CLASS=btn TITLE="Podpowiedź">
+
+<INPUT TYPE=button VALUE=Clear onClick=clearBox() CLASS=btn TITLE="Wyszyść">
+
+<INPUT TYPE=button VALUE=New onClick=newGame() CLASS=btn TITLE="Nowa zagadka">
+
+</TD>
+</TR>
+</TABLE>
+</FORM>
+</BODY>
+</html>
