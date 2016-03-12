@@ -2,7 +2,7 @@
 categories_group = ["turystyka", "kultura", "aktywny wypoczynek", "warsztaty", "edukacja"]
 categories_indv = []
 
-events_lists = {'turystyka': [], 'kultura': [], 'aktywny_wypoczynek': [], 'warsztaty': [], 'edukacja': []}
+events_lists = {'turystyka': [], 'kultura': [], 'aktywny wypoczynek': [], 'warsztaty': [], 'edukacja': []}
 
 
 events = [

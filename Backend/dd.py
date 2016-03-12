@@ -15,7 +15,7 @@ def sort_events_by_date(events):
 
 @app.route('/')
 def hello_world():
-    return render_template('index.html')
+    return render_template('./../index1.html')
 
 @app.route('/events/<category>', )
 def return_events(category):

@@ -365,8 +365,8 @@ li:hover .eventTime {
     text-align: right;
 }
 
-.logoWMainie {
-    margin-top: -100px;
+#logoWMainie {
+    width: 100%;
 }
 /*jasny - 0ca7d3 */
 /*srednio jasny - 0a99c3 */
