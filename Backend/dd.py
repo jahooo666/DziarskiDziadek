@@ -2,10 +2,12 @@
 import json
 from data import *
 from flask import Flask, render_template
+from cors import CORS
 
 app = Flask(__name__)
 app.debug = True
 app.secret_key = "ADSOCXZ(@>?!)_2HA!xz.'[]"
+CORS(app)
 
 def sort_events_by_date(events):
     sorted_events = sorted(events, key=lambda events: events['datetime'])
