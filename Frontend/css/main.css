@@ -329,7 +329,8 @@ ul li {
     font-weight: bold;
     margin: 0;
     padding: 3px 10px 5px 20px;
-    border-bottom: 1px solid #ccc;
+    border: 4px solid #fff;
+    border-radius: 20px;
 
 }
 
@@ -347,6 +348,10 @@ li:nth-child(even) {
 }
 
 li:nth-child(odd) .eventTime {
+    color: #eeeeee;
+}
+
+li:hover .eventTime {
     color: #eeeeee;
 }
 
