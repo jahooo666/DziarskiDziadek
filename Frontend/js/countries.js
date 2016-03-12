@@ -217,14 +217,6 @@
 /* the main function */
 
  function guessit() {
-     var xmlHttp = new XMLHttpRequest();
-     xmlHttp.onreadystatechange = function () {
-         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-             console.log(xmlHttp.responseText);
-     }
-     xmlHttp.open("GET", "http://127.0.0.1:5000/event/1", true); // true for asynchronous
-     xmlHttp.send(null);
-
 
      var guess = $('#guess1');
 

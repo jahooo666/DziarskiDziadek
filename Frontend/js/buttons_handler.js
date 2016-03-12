@@ -12,7 +12,7 @@ var data_for_sam_view = {
     title: 'Aktywności indywidualne',
     background: 'Samemu',
     one: 'Gry',
-    two: 'Zakupy',
+    two: 'Kultura',
     three: 'Edukacja',
     four: 'Sport',
     five: 'brak',
@@ -30,7 +30,7 @@ var data_for_together_view = {
     six: 'brak'
 };
 var data_for_main_view = {
-    title: 'Hoży Seniorzy',
+    title: '',
     background: 'logo',
     one: 'Samemu',
     two: 'W grupie',
@@ -40,15 +40,11 @@ var data_for_main_view = {
     six: 'brak'
 };
 
+var data_for_turystyka_list_view = {
+    title: 'turystyka'
+};
 var data_for_list_view = {
-    title: 'Hoży Seniorzy',
-    background: 'logo',
-    one: 'Samemu',
-    two: 'W grupie',
-    three: 'brak',
-    four: 'brak',
-    five: 'brak',
-    six: 'brak'
+    title: 'turystyka'
 };
 
 var getData = function (view) {
@@ -82,7 +78,21 @@ var togetherBinder = function () {
         switchView('together', 'main');
     });
     $("#together-screen #one").bind('click', function () {
-        switchView('together', 'list');
+        switchView('together', 'turystyka');
+    });
+
+    $("#together-screen #two").bind('click', function () {
+        switchView('together', 'kultura-list');
+    });
+    $("#together-screen #three").bind('click', function () {
+        switchView('together', 'edukacja-list');
+    });
+    $("#together-screen #four").bind('click', function () {
+        switchView('together', 'warsztaty-list');
+    });
+
+    $("#together-screen #five").bind('click', function () {
+        switchView('together', 'aktywny wypoczynek-list');
     });
 };
 
@@ -147,6 +157,10 @@ var switchView = function(from, to) {
     else if (from == 'list' && to == 'together') {
         $("#list-screen").remove();
         togetherBinder();
+    }
+    else if (from == 'together' && to == 'turystyka-list') {
+        $("#together-screen").remove();
+        listBinder();
     }
 };
 
